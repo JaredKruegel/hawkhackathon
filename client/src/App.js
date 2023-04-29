@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import { useState } from "react";
-//change
 import './App.css';
 
 const defaultProjects = [{
