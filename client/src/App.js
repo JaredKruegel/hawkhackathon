@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import { useState } from "react";
 import './App.css';
-
+//tets
 const defaultProjects = [{
   name: "Hawkhack",
   description: "This is a project that we worked on",
@@ -33,7 +33,7 @@ const projectMapper = (project) => {
   </>)
 }
 
-function App() {
+function App1() {
   const [projects, setProjects] = useState([...defaultProjects]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -41,7 +41,7 @@ function App() {
   const [errorMessage, setErrorMessage] = useState("")
 
   return (
-    <div className="App">
+    <div className="App1">
       <p>Projects</p>
       {projects.map(projectMapper)}
 
@@ -78,6 +78,31 @@ function App() {
       </div>
     </div>
   );
+}
+
+function App() {
+  return (
+    <div class="App">
+      <h1>Registration</h1>
+      <form>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname"></input>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname"></input>
+        <br></br>
+        <label for="pword">Password:</label>
+        <input type="password" id="pword" name="pword"></input>
+        <br></br>
+        <label for="pword">Verify Password:</label>
+        <input type="password" id="pword" name="pword"></input>
+        <br></br>
+        <label for="pword">Email:</label>
+        <input type="password" id="pword" name="pword"></input>
+        <br></br>
+        <input type="submit" value="Submit"></input>
+      </form>
+    </div>
+  )
 }
 
 export default App;
